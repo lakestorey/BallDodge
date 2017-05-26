@@ -16,5 +16,13 @@ namespace BallDodge
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MainMenuScreen ms = new MainMenuScreen();
+            this.Controls.Add(ms);
+
+            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
+        }
     }
 }

@@ -52,19 +52,46 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HighScoreScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HighScoreScreen.Designer.cs">
+      <DependentUpon>HighScoreScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructionScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstructionScreen.Designer.cs">
+      <DependentUpon>InstructionScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MainMenuScreen.Designer.cs">
       <DependentUpon>MainMenuScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="OptionScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionScreen.Designer.cs">
+      <DependentUpon>OptionScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HighScoreScreen.resx">
+      <DependentUpon>HighScoreScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructionScreen.resx">
+      <DependentUpon>InstructionScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuScreen.resx">
       <DependentUpon>MainMenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionScreen.resx">
+      <DependentUpon>OptionScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +121,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dodgeball_gameover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joystick part 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joyStick1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
