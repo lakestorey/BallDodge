@@ -15,6 +15,8 @@ namespace BallDodge
         public Form1()
         {
             InitializeComponent();
+            GameScreen gs = new GameScreen();
+            this.Controls.Add(gs);
         }
     }
 }
