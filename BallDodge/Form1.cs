@@ -15,6 +15,7 @@ namespace BallDodge
         public Form1()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
         private void Form1_Load(object sender, EventArgs e)

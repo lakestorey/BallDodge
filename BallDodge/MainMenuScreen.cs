@@ -15,11 +15,16 @@ namespace BallDodge
         int index = 0;
         int lastIndex = 0;
 
+        Graphics g;
+
+        Pen pen = new Pen(Color.White, 3);
+
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown;
 
         public MainMenuScreen()
         {
             InitializeComponent();
+            g = this.CreateGraphics();
         }
 
         private void MenuScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -91,16 +96,20 @@ namespace BallDodge
             switch (lastIndex)
             {
                 case 0:
-                    playLabel.ForeColor = Color.White;
+                    playLabel.BorderStyle = BorderStyle.None;
+                    playLabel.BackColor = Color.Transparent;
                     break;
                 case 1:
-                    highscoreLabel.ForeColor = Color.White;
+                    highscoreLabel.BorderStyle = BorderStyle.None;
+                    highscoreLabel.BackColor = Color.Transparent;
                     break;
                 case 2:
-                    optionLabel.ForeColor = Color.White;
+                    optionLabel.BorderStyle = BorderStyle.None;
+                    optionLabel.BackColor = Color.Transparent;
                     break;
                 case 3:
-                    exitLabel.ForeColor = Color.White;
+                    exitLabel.BorderStyle = BorderStyle.None;
+                    exitLabel.BackColor = Color.Transparent;
                     break;
             }
 
@@ -108,16 +117,20 @@ namespace BallDodge
             switch (index)
             {
                 case 0:
-                    playLabel.ForeColor = Color.Black;
+                    playLabel.BorderStyle = BorderStyle.Fixed3D;
+                    playLabel.BackColor = Color.Black;
                     break;
                 case 1:
-                    highscoreLabel.ForeColor = Color.Black;
+                    highscoreLabel.BorderStyle = BorderStyle.Fixed3D;
+                    highscoreLabel.BackColor = Color.Black;
                     break;
                 case 2:
-                    optionLabel.ForeColor = Color.Black;
+                    optionLabel.BorderStyle = BorderStyle.Fixed3D;
+                    optionLabel.BackColor = Color.Black;
                     break;
                 case 3:
-                    exitLabel.ForeColor = Color.Black;
+                    exitLabel.BorderStyle = BorderStyle.Fixed3D;
+                    exitLabel.BackColor = Color.Black;
                     break;
             }
         }

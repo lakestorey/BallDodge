@@ -126,27 +126,28 @@
             // 
             // mainMenuLabel
             // 
-            this.mainMenuLabel.AutoSize = true;
             this.mainMenuLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mainMenuLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainMenuLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.mainMenuLabel.ForeColor = System.Drawing.Color.White;
-            this.mainMenuLabel.Location = new System.Drawing.Point(583, 487);
+            this.mainMenuLabel.Location = new System.Drawing.Point(579, 478);
             this.mainMenuLabel.Name = "mainMenuLabel";
-            this.mainMenuLabel.Size = new System.Drawing.Size(157, 38);
+            this.mainMenuLabel.Size = new System.Drawing.Size(161, 47);
             this.mainMenuLabel.TabIndex = 7;
             this.mainMenuLabel.Text = "Main Menu";
+            this.mainMenuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // continueLabel
             // 
-            this.continueLabel.AutoSize = true;
-            this.continueLabel.BackColor = System.Drawing.Color.Transparent;
-            this.continueLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.continueLabel.ForeColor = System.Drawing.Color.Black;
-            this.continueLabel.Location = new System.Drawing.Point(594, 439);
+            this.continueLabel.BackColor = System.Drawing.Color.Black;
+            this.continueLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.continueLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.continueLabel.ForeColor = System.Drawing.Color.White;
+            this.continueLabel.Location = new System.Drawing.Point(579, 429);
             this.continueLabel.Name = "continueLabel";
-            this.continueLabel.Size = new System.Drawing.Size(130, 38);
+            this.continueLabel.Size = new System.Drawing.Size(161, 47);
             this.continueLabel.TabIndex = 8;
             this.continueLabel.Text = "Continue";
+            this.continueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InstructionScreen
             // 
@@ -166,6 +167,7 @@
             this.DoubleBuffered = true;
             this.Name = "InstructionScreen";
             this.Size = new System.Drawing.Size(800, 550);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.InstructionScreen_PreviewKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
