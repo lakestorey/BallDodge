@@ -19,6 +19,7 @@ namespace BallDodge
 
         //pens, brushes, fonts and colours
         SolidBrush whiteBrush = new SolidBrush(Color.White);
+        Pen whitePen = new Pen(Color.White, 3);
         Font kgpb20 = new Font("Kozuka Gothic Pro B", 20);
 
         //counter values
@@ -26,6 +27,13 @@ namespace BallDodge
         int counter = 3;
         int counterX;
         int counterY;
+
+        //ball values
+        int ballX = 0;
+        int ballY = 0;
+        int ballSpeed = 5;
+        int ballSize = 20;
+        bool ballsLoaded = false;
         #endregion
 
         public GameScreen()
@@ -55,9 +63,34 @@ namespace BallDodge
             else
             {
                 //game logic 
-            }
 
+                //laod initial balls
+                if (ballsLoaded == false)
+                {
+                    loadBalls();
+                }
+
+                //move balls and detect collision
+                foreach (Ball b in Form1.ballList)
+                {
+                    b.Move();
+                    b.WallCollision(this);
+                }
+            }
             Refresh();
+        }
+
+        private void loadBalls ()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                ballX = randgen.Next(0, this.Width - ballSize);
+                ballY = randgen.Next(0, this.Height - ballSize);
+
+                Ball newBall = new Ball(ballX, ballY, ballSize, ballSpeed, ballSpeed);
+                Form1.ballList.Add(newBall);
+                ballsLoaded = true;
+            }
         }
 
         private void GameScreen_Paint(object sender, PaintEventArgs e)
@@ -67,26 +100,13 @@ namespace BallDodge
                 e.Graphics.Clear(Color.Black);
                 e.Graphics.DrawString(counter + "", kgpb20, whiteBrush, counterX, counterY);
             }
-
-
-        }
-
-        private void GameScreen_Load(object sender, EventArgs e)
-        {
-            //counterX = this.Width / 2 - 20;
-            //counterY = this.Height / 2 - 20;
-            //for (int i = 1; i < 4; i++)
-            //{
-            //    Thread.Sleep(1000);
-            //    if (counter < 1)
-            //    {
-            //        countDownOver = true;
-            //    }
-            //    //Refresh();
-            //    Graphics g = this.CreateGraphics();
-            //    g.DrawString(counter + "", kgpb20, whiteBrush, counterX, counterY);
-            //    counter--;
-            //}
+            else
+            {
+                foreach (Ball b in Form1.ballList)
+                {
+                    e.Graphics.DrawEllipse(whitePen, b.x, b.y, ballSize, ballSize);
+                }
+            }
         }
     }
 }
