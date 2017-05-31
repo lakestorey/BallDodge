@@ -12,6 +12,9 @@ namespace BallDodge
 {
     public partial class Form1 : Form
     {
+        public static List<Highscore> highscoreList = new List<Highscore>();
+        public static int currentScore, score;
+
         public Form1()
         {
             InitializeComponent();

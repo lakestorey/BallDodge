@@ -36,7 +36,6 @@
             this.moveDownLabel = new System.Windows.Forms.Label();
             this.titleLabelIS = new System.Windows.Forms.Label();
             this.mainMenuLabel = new System.Windows.Forms.Label();
-            this.continueLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -126,7 +125,8 @@
             // 
             // mainMenuLabel
             // 
-            this.mainMenuLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mainMenuLabel.BackColor = System.Drawing.Color.Black;
+            this.mainMenuLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.mainMenuLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.mainMenuLabel.ForeColor = System.Drawing.Color.White;
             this.mainMenuLabel.Location = new System.Drawing.Point(579, 478);
@@ -136,26 +136,12 @@
             this.mainMenuLabel.Text = "Main Menu";
             this.mainMenuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // continueLabel
-            // 
-            this.continueLabel.BackColor = System.Drawing.Color.Black;
-            this.continueLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.continueLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.continueLabel.ForeColor = System.Drawing.Color.White;
-            this.continueLabel.Location = new System.Drawing.Point(579, 429);
-            this.continueLabel.Name = "continueLabel";
-            this.continueLabel.Size = new System.Drawing.Size(161, 47);
-            this.continueLabel.TabIndex = 8;
-            this.continueLabel.Text = "Continue";
-            this.continueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // InstructionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BallDodge.Properties.Resources.dodgeball_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.continueLabel);
             this.Controls.Add(this.mainMenuLabel);
             this.Controls.Add(this.titleLabelIS);
             this.Controls.Add(this.moveDownLabel);
@@ -185,6 +171,5 @@
         private System.Windows.Forms.Label moveDownLabel;
         private System.Windows.Forms.Label titleLabelIS;
         private System.Windows.Forms.Label mainMenuLabel;
-        private System.Windows.Forms.Label continueLabel;
     }
 }

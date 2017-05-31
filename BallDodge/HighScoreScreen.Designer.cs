@@ -78,6 +78,7 @@
             this.DoubleBuffered = true;
             this.Name = "HighScoreScreen";
             this.Size = new System.Drawing.Size(800, 550);
+            this.Load += new System.EventHandler(this.HighScoreScreen_Load);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.HighScoreScreen_PreviewKeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -83,7 +83,7 @@
             this.optionLabel.Name = "optionLabel";
             this.optionLabel.Size = new System.Drawing.Size(243, 50);
             this.optionLabel.TabIndex = 3;
-            this.optionLabel.Text = "Options";
+            this.optionLabel.Text = "Instructions";
             this.optionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // exitLabel

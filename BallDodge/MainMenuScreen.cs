@@ -57,11 +57,9 @@ namespace BallDodge
                     {
                         //start button
                         case 0:
-                            InstructionScreen si = new InstructionScreen();
-                            si.Location = new Point((form.Width - si.Width) / 2, (form.Height - si.Height) / 2);
+                            //sent right to the game screen(gs)
 
-                            form.Controls.Add(si);
-                            form.Controls.Remove(this);
+                            //gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
 
                             break;
 
@@ -77,12 +75,12 @@ namespace BallDodge
 
                         //option button
                         case 2:
-                            OptionScreen os = new OptionScreen();
+                            InstructionScreen si = new InstructionScreen();
+                            si.Location = new Point((form.Width - si.Width) / 2, (form.Height - si.Height) / 2);
 
-                            form.Controls.Add(os);
+                            form.Controls.Add(si);
                             form.Controls.Remove(this);
 
-                            os.Location = new Point((form.Width - os.Width) / 2, (form.Height - os.Height) / 2);
                             break;
                         case 3:
                         //exit button

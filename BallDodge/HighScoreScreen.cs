@@ -12,8 +12,6 @@ namespace BallDodge
 {
     public partial class HighScoreScreen : UserControl
     {
-        int index = 0;
-        int lastIndex = 0;
 
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, spaceDown, escapeDown;
 
@@ -24,42 +22,40 @@ namespace BallDodge
 
         private void HighScoreScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            index = lastIndex;
-            Form form = this.FindForm();
-
-            switch (e.KeyCode)
+            if (e.KeyCode == Keys.Escape)
             {
-                case Keys.Up:
-                    if (index != 0)
-                        index--;
-                    else
-                    {
-                        index = 0;
-                    }
-                    break;
-                case Keys.Down:
-                    if (index != 0)
-                        index++;
-                    else
-                    {
-                        index = 0;
-                    }
-                    break;
+                MainMenuScreen ms = new MainMenuScreen();
+                Form form = this.FindForm();
 
-                case Keys.Space:
-                    switch (index)
-                    {
-                        //start button
-                        case 0:
-                            MainMenuScreen ms = new MainMenuScreen();
-                            ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+                form.Controls.Add(ms);
+                form.Controls.Remove(this);
 
-                            form.Controls.Add(ms);
-                            form.Controls.Remove(this);
+                ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+            }
+            else if (e.KeyCode == Keys.Space)
+            {
+                MainMenuScreen ms = new MainMenuScreen();
+                Form form = this.FindForm();
 
-                            break;
-                    }
-                    break;
+                form.Controls.Add(ms);
+                form.Controls.Remove(this);
+
+                ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+            }
+        }
+
+        private void HighScoreScreen_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Form1.highscoreList.Count; i++)
+            {
+                if ((i + 1) >= 10)
+                {
+                    highscoreDisplay.Text += (i + 1) + ".  " + Form1.highscoreList[i].name + "   level " + Form1.highscoreList[i].level + "   ";
+                }
+                else
+                {
+                    highscoreDisplay.Text += (i + 1) + ".   " + Form1.highscoreList[i].name + "   level " + Form1.highscoreList[i].level + "   ";
+                }
             }
         }
     }
