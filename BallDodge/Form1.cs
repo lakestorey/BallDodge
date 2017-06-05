@@ -14,6 +14,8 @@ namespace BallDodge
     {
 
         public static List<Ball> ballList = new List<Ball>();
+        public static List<Paddle> paddleList = new List<Paddle>();
+
         public Form1()
         {
             InitializeComponent();
