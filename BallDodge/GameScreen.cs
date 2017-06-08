@@ -20,6 +20,7 @@ namespace BallDodge
         //pens, brushes, fonts and colours
         SolidBrush whiteBrush = new SolidBrush(Color.White);
         SolidBrush redBrush = new SolidBrush(Color.Red);
+        SolidBrush blueBrush = new SolidBrush(Color.Blue);
         Pen whitePen = new Pen(Color.White, 3);
         Pen bluePen = new Pen(Color.Blue, 3);
         Font kgpb20 = new Font("Kozuka Gothic Pro B", 20);
@@ -33,23 +34,26 @@ namespace BallDodge
         //ball values
         int ballX = 0;
         int ballY = 0;
-        int ballSpeed = 4;
+        int ballSpeedX = 3;
+        int ballSpeedY = 3;
         int ballSize = 20;
         bool initialLoaded = false;
         bool ballColoured = false;
         int colouredBallIndex = 0;
+        int ballDirection = 0;
 
         //paddle values
         int paddleX = 0;
         int paddleY = 0;
-        int paddleSpeed = 5;
-        int paddleHeight = 20;
-        int paddleWidth = 35;
+        int paddleSpeed = 6;
+        int paddleHeight = 15;
+        int paddleWidth = 45;
         string paddleVertical = "";
         string paddleHorizontal = "";
         public static int playerLives = 3;
         public static bool targetHit = false;
         int collisionValue = 0;
+        int playerScore = 0;
 
         //controls
         bool upArrowDown = false;
@@ -129,6 +133,9 @@ namespace BallDodge
             {
                 //game logic 
 
+                //upade score
+                playerScore = Form1.ballList.Count();
+
                 //laod initial balls
                 if (initialLoaded == false)
                 {
@@ -203,6 +210,7 @@ namespace BallDodge
                     }
                     else if (collisionValue == 2)
                     {
+                        playerLives++;
                         reassignTarget();
                         ticksSinceHit = 0;
 
@@ -216,8 +224,9 @@ namespace BallDodge
                 //detect if dead
                 if (playerLives <= 0)
                 {
+                    Refresh();
                     gameTimer.Stop();
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     Application.Exit();
                 }
             }
@@ -230,10 +239,27 @@ namespace BallDodge
         {
             for (int i = 0; i < 3; i++)
             {
-                ballX = randgen.Next(0, this.Width - ballSize);
-                ballY = randgen.Next(0, this.Height - ballSize);
+                ballX = randgen.Next(0, this.Width - ballSize - 50);
+                ballY = randgen.Next(0, this.Height - ballSize - 50);
+                ballDirection = randgen.Next(0, 2);
 
-                Ball newBall = new Ball(ballX, ballY, ballSize, ballSpeed, ballSpeed, ballColoured);
+                if (ballDirection == 0)
+                {
+                    ballSpeedX = 5;
+                    ballSpeedY = 5;
+                }
+                if (ballDirection == 1)
+                {
+                    ballSpeedX = -5;
+                    ballSpeedY = 5;
+                }
+                if (ballDirection == 2)
+                {
+                    ballSpeedX = 5;
+                    ballSpeedY = -5;
+                }
+
+                Ball newBall = new Ball(ballX, ballY, ballSize, ballSpeedX, ballSpeedY, ballColoured);
                 Form1.ballList.Add(newBall);
             }
 
@@ -252,21 +278,39 @@ namespace BallDodge
 
         public void reassignTarget ()
         {
-            //randomize spawning point
-            ballX = randgen.Next(0, this.Width - ballSize);
-            ballY = randgen.Next(0, this.Height - ballSize);
 
-            //add new ball to list
-            Ball newBall = new Ball(ballX, ballY, ballSize, ballSpeed, ballSpeed, ballColoured);
-            Form1.ballList.Add(newBall);
-
-            //pick new coloured ball
+            //set all balls to uncoloured
             foreach (Ball b in Form1.ballList)
             {
                 b.coloured = false;
             }
-            colouredBallIndex = randgen.Next(0, Form1.ballList.Count() - 1);
-            Form1.ballList[colouredBallIndex].coloured = true;
+
+            //randomize spawning point
+            ballX = randgen.Next(0, this.Width - ballSize - 50);
+            ballY = randgen.Next(0, this.Height - ballSize - 50);
+
+            //add coloured ball to list
+            ballDirection = randgen.Next(0, 2);
+
+            if (ballDirection == 0)
+            {
+                ballSpeedX = 5;
+                ballSpeedY = 5;
+            }
+            if (ballDirection == 1)
+            {
+                ballSpeedX = -5;
+                ballSpeedY = 5;
+            }
+            if (ballDirection == 2)
+            {
+                ballSpeedX = 5;
+                ballSpeedY = -5;
+            }
+
+            Ball newBall = new Ball(ballX, ballY, ballSize, ballSpeedX, ballSpeedY, true);
+            Form1.ballList.Add(newBall);
+
             targetHit = false;
         }
 
@@ -280,9 +324,14 @@ namespace BallDodge
             else
             {
                 e.Graphics.DrawString("Lives: " + playerLives, kgpb20, whiteBrush, 5, 5);
+                e.Graphics.DrawString("Score: " + playerScore, kgpb20, whiteBrush, this.Width - 125, 5);
                 foreach (Ball b in Form1.ballList)
                 {
                     if (b.coloured == true)
+                    {
+                        e.Graphics.FillEllipse(blueBrush, b.x, b.y, b.size, b.size);
+                    }
+                    else
                     {
                         e.Graphics.FillEllipse(redBrush, b.x, b.y, b.size, b.size);
                     }
@@ -290,7 +339,8 @@ namespace BallDodge
                 }
                 foreach (Paddle p in Form1.paddleList)
                 {
-                    e.Graphics.DrawRectangle(bluePen, p.x, p.y, p.width, p.height);
+                    e.Graphics.FillRectangle(blueBrush, p.x, p.y, p.width, p.height);
+                    e.Graphics.DrawRectangle(whitePen, p.x, p.y, p.width, p.height);
                 }
             }
         }

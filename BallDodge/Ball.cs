@@ -10,7 +10,7 @@ namespace BallDodge
 {
     public class Ball
     {
-        public int x, y, size, xSpeed, ySpeed;
+        public int x, y, size, xSpeed, ySpeed, ticks;
         public bool coloured;
         public Ball (int _x, int _y,int _size, int _xSpeed, int _ySpeed, bool _coloured)
         {
@@ -20,6 +20,7 @@ namespace BallDodge
             xSpeed = _xSpeed;
             ySpeed = _ySpeed;
             coloured = _coloured;
+            ticks = 0;
         }
 
         public void Move()
@@ -31,22 +32,27 @@ namespace BallDodge
         //method to detect when the ball has collided with the wall
         public void WallCollision(UserControl US)
         {
-            if (x <= 0)
+            if (x <= 0 && ticks % 2 == 0)
             {
                 xSpeed *= -1;
+                ticks = 0;
             }
-            if (x >= US.Width - size - 15)
+            if (x >= US.Width - size - 15 && ticks % 2 == 0)
             {
                 xSpeed *= -1;
+                ticks = 0;
             }
-            if (y <= 0)
+            if (y <= 0 && ticks % 2 == 0)
             {
                 ySpeed *= -1;
+                ticks = 0;
             }
-            if (y >= US.Height - size - 15)
+            if (y >= US.Height - size - 15 && ticks % 2 == 0)
             {
                 ySpeed *= -1;
+                ticks = 0;
             }
+            ticks++;
         }
 
         //method to detect when the ball has collided with the paddle
