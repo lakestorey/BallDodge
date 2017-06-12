@@ -57,9 +57,11 @@ namespace BallDodge
                     {
                         //start button
                         case 0:
-                            //sent right to the game screen(gs)
+                            GameScreen gs = new GameScreen();
+                            form.Controls.Add(gs);
+                            form.Controls.Remove(this);
 
-                            //gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
+                            gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
 
                             break;
 
