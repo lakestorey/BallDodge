@@ -227,7 +227,12 @@ namespace BallDodge
                     Refresh();
                     gameTimer.Stop();
                     Thread.Sleep(1000);
-                    Application.Exit();
+                    EndGameScreen egs = new EndGameScreen();
+                    Form form = this.FindForm();
+
+                    form.Controls.Remove(this);
+                    form.Controls.Add(egs);
+                    egs.Location = new Point((form.Width - egs.Width) / 2, (form.Height - egs.Height) / 2);
                 }
             }
             ticksSinceHit++;
