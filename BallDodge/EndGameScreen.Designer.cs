@@ -39,13 +39,12 @@
             // replayLabel
             // 
             this.replayLabel.AutoSize = true;
-            this.replayLabel.BackColor = System.Drawing.Color.Black;
-            this.replayLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.replayLabel.BackColor = System.Drawing.Color.Transparent;
             this.replayLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.replayLabel.ForeColor = System.Drawing.Color.White;
             this.replayLabel.Location = new System.Drawing.Point(110, 441);
             this.replayLabel.Name = "replayLabel";
-            this.replayLabel.Size = new System.Drawing.Size(264, 70);
+            this.replayLabel.Size = new System.Drawing.Size(262, 68);
             this.replayLabel.TabIndex = 0;
             this.replayLabel.Text = "Play Again";
             // 
@@ -64,12 +63,13 @@
             // nameText1
             // 
             this.nameText1.AutoSize = true;
-            this.nameText1.BackColor = System.Drawing.Color.Transparent;
+            this.nameText1.BackColor = System.Drawing.Color.Black;
+            this.nameText1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.nameText1.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText1.ForeColor = System.Drawing.Color.White;
             this.nameText1.Location = new System.Drawing.Point(219, 98);
             this.nameText1.Name = "nameText1";
-            this.nameText1.Size = new System.Drawing.Size(121, 136);
+            this.nameText1.Size = new System.Drawing.Size(123, 138);
             this.nameText1.TabIndex = 2;
             this.nameText1.Text = "A";
             // 
@@ -125,6 +125,7 @@
             this.Name = "EndGameScreen";
             this.Size = new System.Drawing.Size(800, 550);
             this.Load += new System.EventHandler(this.EndGameScreen_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.LoseScreen_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.EndGameScreen_PreviewKeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();

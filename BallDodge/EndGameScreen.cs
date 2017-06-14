@@ -24,7 +24,7 @@ namespace BallDodge
 
         private void EndGameScreen_Load(object sender, EventArgs e)
         {
-            outputBox.Text = "You got to Level " + Form1.currentScore + "!";
+            outputBox.Text = "You got to Level " + Form1.ballList.Count + "!";
         }
 
         private void EndGameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -170,9 +170,9 @@ namespace BallDodge
 
                     if (spaceDown == true)
                     {
-                        //Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(GameScreen.currentLevel), Convert.ToString(Form1.currentScore));
-                        //hs.save(hs);
-                        //hs.saveScores(Form1.highscoreList);
+                        Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(GameScreen.playerScore));
+                        hs.save(hs);
+                        hs.saveScores(Form1.highscoreList);
 
                         // Goes to the game screen
 
@@ -192,10 +192,10 @@ namespace BallDodge
 
                     if (spaceDown == true)
                     {
-                        //Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(GameScreen.currentLevel), Convert.ToString(Form1.currentScore));
+                        Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(GameScreen.playerScore));
 
-                        //hs.save(hs);
-                        //hs.saveScores(Form1.highscoreList);
+                        hs.save(hs);
+                        hs.saveScores(Form1.highscoreList);
 
                         // Goes to the main menu screen
 
@@ -215,23 +215,23 @@ namespace BallDodge
                 switch (lastSelected)
                 {
                     case 0:
-                        nameText1.ForeColor = Color.White;
+                        nameText1.BackColor = Color.Transparent;
                         break;
 
                     case 1:
-                        nameText2.ForeColor = Color.White;
+                        nameText2.BackColor = Color.Transparent;
                         break;
 
                     case 2:
-                        nameText3.ForeColor = Color.White;
+                        nameText3.BackColor = Color.Transparent;
                         break;
 
                     case 3:
-                        mainmenuLabel.ForeColor = Color.White;
+                        mainmenuLabel.BackColor = Color.Transparent;
                         break;
 
                     case 4:
-                        replayLabel.ForeColor = Color.White;
+                        replayLabel.BackColor = Color.Transparent;
                         break;
                 }
             }

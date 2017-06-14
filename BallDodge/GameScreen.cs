@@ -53,7 +53,7 @@ namespace BallDodge
         public static int playerLives = 3;
         public static bool targetHit = false;
         int collisionValue = 0;
-        int playerScore = 0;
+        public static int playerScore = 0;
 
         //controls
         bool upArrowDown = false;
@@ -226,8 +226,15 @@ namespace BallDodge
                 {
                     Refresh();
                     gameTimer.Stop();
+                    restart();
                     Thread.Sleep(1000);
-                    Application.Exit();
+                    EndGameScreen egs = new EndGameScreen();
+                    Form form = this.FindForm();
+
+                    form.Controls.Add(egs);
+                    form.Controls.Remove(this);
+
+                    egs.Location = new Point((form.Width - egs.Width) / 2, (form.Height - egs.Height) / 2);
                 }
             }
             ticksSinceHit++;
@@ -275,6 +282,14 @@ namespace BallDodge
             Form1.paddleList.Add(newPaddle);
         }
         #endregion
+
+        private void restart()
+        {
+            playerLives = 3;
+
+            Form1.ballList.Clear();
+            Form1.paddleList.Clear();
+        }
 
         public void reassignTarget ()
         {
