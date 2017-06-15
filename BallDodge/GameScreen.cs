@@ -247,13 +247,7 @@ namespace BallDodge
         }
 
         #region initial loading methods
-        private void restart ()
-        {
-            playerLives = 3;
 
-            Form1.ballList.Clear();
-            Form1.paddleList.Clear();
-    }
         private void loadBalls ()
         {
             for (int i = 0; i < 3; i++)
