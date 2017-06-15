@@ -44,15 +44,19 @@ namespace BallDodge
             {
                 case Keys.Left:
                     leftArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Down:
                     downArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Right:
                     rightArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Up:
                     upArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Space:
                     spaceDown = true;
@@ -200,12 +204,12 @@ namespace BallDodge
                         // Goes to the main menu screen
 
                         Form form = this.FindForm();
-                        //gamesreen will go there gs = new Screens.GameScreen();
+                        GameScreen gs = new GameScreen();
 
-                        //gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
+                        gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
 
-                        //form.Controls.Add(gs);
-                        //form.Controls.Remove(this);
+                        form.Controls.Add(gs);
+                        form.Controls.Remove(this);
                     }
                     break;
             }
@@ -215,23 +219,23 @@ namespace BallDodge
                 switch (lastSelected)
                 {
                     case 0:
-                        nameText1.ForeColor = Color.White;
+                        nameText1.BackColor = Color.Transparent;
                         break;
 
                     case 1:
-                        nameText2.ForeColor = Color.White;
+                        nameText2.BackColor = Color.Transparent;
                         break;
 
                     case 2:
-                        nameText3.ForeColor = Color.White;
+                        nameText3.BackColor = Color.Transparent;
                         break;
 
                     case 3:
-                        mainmenuLabel.ForeColor = Color.White;
+                        mainmenuLabel.BackColor = Color.Transparent;
                         break;
 
                     case 4:
-                        replayLabel.ForeColor = Color.White;
+                        replayLabel.BackColor = Color.Transparent;
                         break;
                 }
             }

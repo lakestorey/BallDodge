@@ -206,6 +206,7 @@ namespace BallDodge
 
                         b.ySpeed *= -1;
                         b.xSpeed *= -1;
+                        Form1.bounceSound.Play();
                         break;
                     }
                     else if (collisionValue == 2)
@@ -216,6 +217,7 @@ namespace BallDodge
 
                         b.ySpeed *= -1;
                         b.xSpeed *= -1;
+                        Form1.slipSound.Play();
                         break;
                     }
                 }
@@ -226,6 +228,8 @@ namespace BallDodge
                 {
                     Refresh();
                     gameTimer.Stop();
+                    Form1.tadaSound.Play();
+                    restart();
                     Thread.Sleep(1000);
                     EndGameScreen egs = new EndGameScreen();
                     Form form = this.FindForm();
@@ -240,6 +244,13 @@ namespace BallDodge
         }
 
         #region initial loading methods
+        private void restart ()
+        {
+            playerLives = 3;
+
+            Form1.ballList.Clear();
+            Form1.paddleList.Clear();
+    }
         private void loadBalls ()
         {
             for (int i = 0; i < 3; i++)

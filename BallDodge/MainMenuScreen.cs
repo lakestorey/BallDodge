@@ -35,16 +35,22 @@ namespace BallDodge
             switch (e.KeyCode)
             {
                 case Keys.Up:
+                    Form1.clickSound.Play();
                     if (index != 0)
+                    {
                         index--;
+                    }
                     else
                     {
                         index = 3;
                     }
                     break;
                 case Keys.Down:
+                    Form1.clickSound.Play();
                     if (index != 3)
+                    {
                         index++;
+                    }
                     else
                     {
                         index = 0;
