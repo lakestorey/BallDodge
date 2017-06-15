@@ -44,15 +44,19 @@ namespace BallDodge
             {
                 case Keys.Left:
                     leftArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Down:
                     downArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Right:
                     rightArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Up:
                     upArrowDown = true;
+                    Form1.clickSound.Play();
                     break;
                 case Keys.Space:
                     spaceDown = true;

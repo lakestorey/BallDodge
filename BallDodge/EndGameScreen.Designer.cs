@@ -52,11 +52,11 @@
             // 
             this.mainmenuLabel.AutoSize = true;
             this.mainmenuLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mainmenuLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainmenuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainmenuLabel.ForeColor = System.Drawing.Color.White;
             this.mainmenuLabel.Location = new System.Drawing.Point(416, 441);
             this.mainmenuLabel.Name = "mainmenuLabel";
-            this.mainmenuLabel.Size = new System.Drawing.Size(275, 68);
+            this.mainmenuLabel.Size = new System.Drawing.Size(271, 55);
             this.mainmenuLabel.TabIndex = 1;
             this.mainmenuLabel.Text = "Main Menu";
             // 
@@ -77,11 +77,11 @@
             // 
             this.nameText3.AutoSize = true;
             this.nameText3.BackColor = System.Drawing.Color.Transparent;
-            this.nameText3.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nameText3.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText3.ForeColor = System.Drawing.Color.White;
             this.nameText3.Location = new System.Drawing.Point(461, 98);
             this.nameText3.Name = "nameText3";
-            this.nameText3.Size = new System.Drawing.Size(121, 136);
+            this.nameText3.Size = new System.Drawing.Size(110, 108);
             this.nameText3.TabIndex = 3;
             this.nameText3.Text = "A";
             // 
@@ -89,11 +89,11 @@
             // 
             this.nameText2.AutoSize = true;
             this.nameText2.BackColor = System.Drawing.Color.Transparent;
-            this.nameText2.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nameText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText2.ForeColor = System.Drawing.Color.White;
             this.nameText2.Location = new System.Drawing.Point(340, 98);
             this.nameText2.Name = "nameText2";
-            this.nameText2.Size = new System.Drawing.Size(121, 136);
+            this.nameText2.Size = new System.Drawing.Size(110, 108);
             this.nameText2.TabIndex = 4;
             this.nameText2.Text = "A";
             // 
@@ -101,11 +101,11 @@
             // 
             this.outputBox.AutoSize = true;
             this.outputBox.BackColor = System.Drawing.Color.Transparent;
-            this.outputBox.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.outputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.outputBox.ForeColor = System.Drawing.Color.White;
             this.outputBox.Location = new System.Drawing.Point(286, 260);
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(228, 36);
+            this.outputBox.Size = new System.Drawing.Size(222, 31);
             this.outputBox.TabIndex = 5;
             this.outputBox.Text = "You got to level 6";
             // 
