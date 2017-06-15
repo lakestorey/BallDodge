@@ -53,7 +53,6 @@ namespace BallDodge
         public static int playerLives = 3;
         public static bool targetHit = false;
         int collisionValue = 0;
-        public static int playerScore = 0;
 
         //controls
         bool upArrowDown = false;
@@ -134,7 +133,7 @@ namespace BallDodge
                 //game logic 
 
                 //upade score
-                playerScore = Form1.ballList.Count();
+                Form1.playerScore = Form1.ballList.Count();
 
                 //laod initial balls
                 if (initialLoaded == false)
@@ -339,7 +338,7 @@ namespace BallDodge
             else
             {
                 e.Graphics.DrawString("Lives: " + playerLives, kgpb20, whiteBrush, 5, 5);
-                e.Graphics.DrawString("Score: " + playerScore, kgpb20, whiteBrush, this.Width - 125, 5);
+                e.Graphics.DrawString("Score: " + Form1.playerScore, kgpb20, whiteBrush, this.Width - 125, 5);
                 foreach (Ball b in Form1.ballList)
                 {
                     if (b.coloured == true)

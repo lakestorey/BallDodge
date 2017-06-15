@@ -24,7 +24,7 @@ namespace BallDodge
 
         private void EndGameScreen_Load(object sender, EventArgs e)
         {
-            outputBox.Text = "You got to Level " + Form1.ballList.Count + "!";
+            outputBox.Text = "You got to Level " + Form1.playerScore + "!";
         }
 
         private void EndGameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -170,9 +170,11 @@ namespace BallDodge
 
                     if (spaceDown == true)
                     {
-                        Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(GameScreen.playerScore));
+                        Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(Form1.playerScore));
                         hs.save(hs);
                         hs.saveScores(Form1.highscoreList);
+
+
 
                         // Goes to the game screen
 
@@ -192,7 +194,7 @@ namespace BallDodge
 
                     if (spaceDown == true)
                     {
-                        Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(GameScreen.playerScore));
+                        Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(Form1.playerScore));
 
                         hs.save(hs);
                         hs.saveScores(Form1.highscoreList);
@@ -200,12 +202,12 @@ namespace BallDodge
                         // Goes to the main menu screen
 
                         Form form = this.FindForm();
-                        //gamesreen will go there gs = new Screens.GameScreen();
+                        GameScreen gs = new GameScreen();
 
-                        //gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
+                        gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
 
-                        //form.Controls.Add(gs);
-                        //form.Controls.Remove(this);
+                        form.Controls.Add(gs);
+                        form.Controls.Remove(this);
                     }
                     break;
             }

@@ -24,7 +24,7 @@ namespace BallDodge
 
             for (int i = 0; i < Convert.ToInt16(Form1.highscoreList.Count); i++)
             {
-                if (Form1.currentScore > Convert.ToInt16(Form1.highscoreList[i].level))
+                if (Form1.playerScore > Convert.ToInt16(Form1.highscoreList[i].level))
                 {
                     Form1.highscoreList.Insert(i, hs);
 
@@ -35,7 +35,6 @@ namespace BallDodge
 
             if (scoreAdded == false)
             {
-
                 Form1.highscoreList.Add(hs);
             }
 
