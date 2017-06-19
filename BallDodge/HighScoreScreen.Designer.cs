@@ -37,20 +37,20 @@
             // 
             this.highscoreLabel.AutoSize = true;
             this.highscoreLabel.BackColor = System.Drawing.Color.Transparent;
-            this.highscoreLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.highscoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.highscoreLabel.ForeColor = System.Drawing.Color.White;
             this.highscoreLabel.Location = new System.Drawing.Point(112, 37);
             this.highscoreLabel.Name = "highscoreLabel";
-            this.highscoreLabel.Size = new System.Drawing.Size(577, 136);
+            this.highscoreLabel.Size = new System.Drawing.Size(576, 108);
             this.highscoreLabel.TabIndex = 0;
             this.highscoreLabel.Text = "High Scores";
             // 
             // highscoreDisplay
             // 
-            this.highscoreDisplay.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highscoreDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highscoreDisplay.Location = new System.Drawing.Point(159, 201);
             this.highscoreDisplay.Name = "highscoreDisplay";
-            this.highscoreDisplay.Size = new System.Drawing.Size(483, 242);
+            this.highscoreDisplay.Size = new System.Drawing.Size(483, 253);
             this.highscoreDisplay.TabIndex = 1;
             // 
             // mainMenuLabel
@@ -58,11 +58,11 @@
             this.mainMenuLabel.AutoSize = true;
             this.mainMenuLabel.BackColor = System.Drawing.Color.Black;
             this.mainMenuLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.mainMenuLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainMenuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainMenuLabel.ForeColor = System.Drawing.Color.White;
             this.mainMenuLabel.Location = new System.Drawing.Point(612, 491);
             this.mainMenuLabel.Name = "mainMenuLabel";
-            this.mainMenuLabel.Size = new System.Drawing.Size(187, 47);
+            this.mainMenuLabel.Size = new System.Drawing.Size(185, 39);
             this.mainMenuLabel.TabIndex = 2;
             this.mainMenuLabel.Text = "Main Menu";
             // 

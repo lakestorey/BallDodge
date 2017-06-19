@@ -38,6 +38,7 @@ namespace BallDodge
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
             MainMenuScreen ms = new MainMenuScreen();
             this.Controls.Add(ms);
 

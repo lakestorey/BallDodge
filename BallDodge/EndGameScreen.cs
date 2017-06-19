@@ -24,7 +24,7 @@ namespace BallDodge
 
         private void EndGameScreen_Load(object sender, EventArgs e)
         {
-            outputBox.Text = "You got to Level " + Form1.playerScore + "!";
+            outputBox.Text = "Your Score Was: " + Form1.playerScore + "!";
         }
 
         private void EndGameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -175,13 +175,11 @@ namespace BallDodge
                     if (spaceDown == true)
                     {
                         Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(Form1.playerScore));
+
                         hs.save(hs);
                         hs.saveScores(Form1.highscoreList);
 
-
-
                         // Goes to the game screen
-
                         Form form = this.FindForm();
                         MainMenuScreen ms = new MainMenuScreen();
 
@@ -199,12 +197,10 @@ namespace BallDodge
                     if (spaceDown == true)
                     {
                         Highscore hs = new Highscore(nameText1.Text + nameText2.Text + nameText3.Text, Convert.ToString(Form1.playerScore));
-
                         hs.save(hs);
                         hs.saveScores(Form1.highscoreList);
 
-                        // Goes to the main menu screen
-
+                        // Goes to the game screen
                         Form form = this.FindForm();
                         GameScreen gs = new GameScreen();
 

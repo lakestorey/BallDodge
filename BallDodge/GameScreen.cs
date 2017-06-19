@@ -360,7 +360,10 @@ namespace BallDodge
                 }
                 foreach (Paddle p in Form1.paddleList)
                 {
-                    e.Graphics.FillRectangle(blueBrush, p.x, p.y, p.width, p.height);
+                    if (ticksSinceHit >= 15)
+                    {
+                        e.Graphics.FillRectangle(blueBrush, p.x, p.y, p.width, p.height);
+                    }
                     e.Graphics.DrawRectangle(whitePen, p.x, p.y, p.width, p.height);
                 }
             }
