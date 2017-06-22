@@ -62,39 +62,39 @@
             // 
             // nameText1
             // 
-            this.nameText1.AutoSize = true;
             this.nameText1.BackColor = System.Drawing.Color.Black;
             this.nameText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText1.ForeColor = System.Drawing.Color.White;
-            this.nameText1.Location = new System.Drawing.Point(219, 98);
+            this.nameText1.Location = new System.Drawing.Point(193, 98);
             this.nameText1.Name = "nameText1";
-            this.nameText1.Size = new System.Drawing.Size(110, 108);
+            this.nameText1.Size = new System.Drawing.Size(150, 150);
             this.nameText1.TabIndex = 0;
             this.nameText1.Text = "A";
+            this.nameText1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameText3
             // 
-            this.nameText3.AutoSize = true;
             this.nameText3.BackColor = System.Drawing.Color.Transparent;
             this.nameText3.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText3.ForeColor = System.Drawing.Color.White;
-            this.nameText3.Location = new System.Drawing.Point(461, 98);
+            this.nameText3.Location = new System.Drawing.Point(493, 98);
             this.nameText3.Name = "nameText3";
-            this.nameText3.Size = new System.Drawing.Size(110, 108);
+            this.nameText3.Size = new System.Drawing.Size(150, 150);
             this.nameText3.TabIndex = 2;
             this.nameText3.Text = "A";
+            this.nameText3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameText2
             // 
-            this.nameText2.AutoSize = true;
             this.nameText2.BackColor = System.Drawing.Color.Transparent;
             this.nameText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText2.ForeColor = System.Drawing.Color.White;
-            this.nameText2.Location = new System.Drawing.Point(340, 98);
+            this.nameText2.Location = new System.Drawing.Point(343, 98);
             this.nameText2.Name = "nameText2";
-            this.nameText2.Size = new System.Drawing.Size(110, 108);
+            this.nameText2.Size = new System.Drawing.Size(150, 150);
             this.nameText2.TabIndex = 1;
             this.nameText2.Text = "A";
+            this.nameText2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // outputBox
             // 

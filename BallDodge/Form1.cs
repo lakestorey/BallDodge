@@ -16,10 +16,10 @@ namespace BallDodge
 {
     public partial class Form1 : Form
     {
-        public static SoundPlayer bounceSound = new SoundPlayer(Properties.Resources.Cartoon_Hop_SoundBible_com_553158131);
-        public static SoundPlayer tadaSound = new SoundPlayer(Properties.Resources.Ta_Da_SoundBible_com_1884170640);
-        public static SoundPlayer slipSound = new SoundPlayer(Properties.Resources.Banana_Peel_Slip_SoundBible_com_580403617);
-        public static SoundPlayer clickSound = new SoundPlayer(Properties.Resources.Click2_Sebastian_759472264);
+        public static SoundPlayer clickSound = new SoundPlayer(Properties.Resources.clickSound);
+        public static SoundPlayer coinSound = new SoundPlayer(Properties.Resources.coin);
+        public static SoundPlayer bumpSound = new SoundPlayer(Properties.Resources.bump);
+        public static SoundPlayer deathSound = new SoundPlayer(Properties.Resources.Death);
 
         public static List<Ball> ballList = new List<Ball>();
         public static List<Paddle> paddleList = new List<Paddle>();

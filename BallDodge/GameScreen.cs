@@ -205,7 +205,7 @@ namespace BallDodge
 
                         b.ySpeed *= -1;
                         b.xSpeed *= -1;
-                        Form1.bounceSound.Play();
+                        Form1.bumpSound.Play();
                         break;
                     }
                     else if (collisionValue == 2)
@@ -216,7 +216,7 @@ namespace BallDodge
 
                         b.ySpeed *= -1;
                         b.xSpeed *= -1;
-                        Form1.slipSound.Play();
+                        Form1.coinSound.Play();
                         break;
                     }
                 }
@@ -228,7 +228,7 @@ namespace BallDodge
                     Refresh();
                     gameTimer.Stop();
 
-                    Form1.tadaSound.Play();
+                    Form1.deathSound.Play();
 
                     restart();
                     Thread.Sleep(1000);
