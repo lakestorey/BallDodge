@@ -34,7 +34,7 @@ namespace BallDodge
             //to make sure that if you click to the bottom or top you will go to the other end instead of just stopping
             switch (e.KeyCode)
             {
-                case Keys.Up:
+                case Keys.W:
                     Form1.clickSound.Play();
                     if (index != 0)
                     {
@@ -45,7 +45,7 @@ namespace BallDodge
                         index = 3;
                     }
                     break;
-                case Keys.Down:
+                case Keys.S:
                     Form1.clickSound.Play();
                     if (index != 3)
                     {

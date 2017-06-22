@@ -42,19 +42,19 @@ namespace BallDodge
 
             switch (e.KeyCode)
             {
-                case Keys.Left:
+                case Keys.A:
                     leftArrowDown = true;
                     Form1.clickSound.Play();
                     break;
-                case Keys.Down:
+                case Keys.S:
                     downArrowDown = true;
                     Form1.clickSound.Play();
                     break;
-                case Keys.Right:
+                case Keys.D:
                     rightArrowDown = true;
                     Form1.clickSound.Play();
                     break;
-                case Keys.Up:
+                case Keys.W:
                     upArrowDown = true;
                     Form1.clickSound.Play();
                     break;
@@ -489,16 +489,16 @@ namespace BallDodge
         {
             switch (e.KeyCode)
             {
-                case Keys.Left:
+                case Keys.A:
                     leftArrowDown = false;
                     break;
-                case Keys.Down:
+                case Keys.S:
                     downArrowDown = false;
                     break;
-                case Keys.Right:
+                case Keys.D:
                     rightArrowDown = false;
                     break;
-                case Keys.Up:
+                case Keys.W:
                     upArrowDown = false;
                     break;
                 case Keys.Space:
