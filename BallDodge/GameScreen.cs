@@ -76,16 +76,16 @@ namespace BallDodge
         {
             switch (e.KeyCode)
             {
-                case Keys.W:
+                case Keys.Up:
                     upArrowDown = true;
                     break;
-                case Keys.S:
+                case Keys.Down:
                     downArrowDown = true;
                     break;
-                case Keys.A:
+                case Keys.Left:
                     leftArrowDown = true;
                     break;
-                case Keys.D:
+                case Keys.Right:
                     rightArrowDown = true;
                     break;
             }
@@ -96,16 +96,16 @@ namespace BallDodge
         {
             switch (e.KeyCode)
             {
-                case Keys.W:
+                case Keys.Up:
                     upArrowDown = false;
                     break;
-                case Keys.S:
+                case Keys.Down:
                     downArrowDown = false;
                     break;
-                case Keys.A:
+                case Keys.Left:
                     leftArrowDown = false;
                     break;
-                case Keys.D:
+                case Keys.Right:
                     rightArrowDown = false;
                     break;
             }

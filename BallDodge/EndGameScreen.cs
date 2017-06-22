@@ -24,7 +24,7 @@ namespace BallDodge
 
         private void EndGameScreen_Load(object sender, EventArgs e)
         {
-            outputBox.Text = "You got to Level " + Form1.playerScore + "!";
+            outputBox.Text = "You got a score of " + Form1.playerScore + "!";
         }
 
         private void EndGameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)

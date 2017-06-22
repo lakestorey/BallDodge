@@ -45,7 +45,7 @@
             this.replayLabel.Location = new System.Drawing.Point(110, 441);
             this.replayLabel.Name = "replayLabel";
             this.replayLabel.Size = new System.Drawing.Size(262, 68);
-            this.replayLabel.TabIndex = 0;
+            this.replayLabel.TabIndex = 3;
             this.replayLabel.Text = "Play Again";
             // 
             // mainmenuLabel
@@ -57,45 +57,45 @@
             this.mainmenuLabel.Location = new System.Drawing.Point(416, 441);
             this.mainmenuLabel.Name = "mainmenuLabel";
             this.mainmenuLabel.Size = new System.Drawing.Size(271, 55);
-            this.mainmenuLabel.TabIndex = 1;
+            this.mainmenuLabel.TabIndex = 4;
             this.mainmenuLabel.Text = "Main Menu";
             // 
             // nameText1
             // 
-            this.nameText1.AutoSize = true;
             this.nameText1.BackColor = System.Drawing.Color.Black;
             this.nameText1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.nameText1.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText1.ForeColor = System.Drawing.Color.White;
-            this.nameText1.Location = new System.Drawing.Point(219, 98);
+            this.nameText1.Location = new System.Drawing.Point(174, 91);
             this.nameText1.Name = "nameText1";
-            this.nameText1.Size = new System.Drawing.Size(123, 138);
-            this.nameText1.TabIndex = 2;
+            this.nameText1.Size = new System.Drawing.Size(150, 150);
+            this.nameText1.TabIndex = 0;
             this.nameText1.Text = "A";
+            this.nameText1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameText3
             // 
-            this.nameText3.AutoSize = true;
             this.nameText3.BackColor = System.Drawing.Color.Transparent;
-            this.nameText3.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nameText3.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameText3.ForeColor = System.Drawing.Color.White;
-            this.nameText3.Location = new System.Drawing.Point(461, 98);
+            this.nameText3.Location = new System.Drawing.Point(476, 91);
             this.nameText3.Name = "nameText3";
-            this.nameText3.Size = new System.Drawing.Size(110, 108);
-            this.nameText3.TabIndex = 3;
+            this.nameText3.Size = new System.Drawing.Size(150, 150);
+            this.nameText3.TabIndex = 2;
             this.nameText3.Text = "A";
+            this.nameText3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameText2
             // 
-            this.nameText2.AutoSize = true;
             this.nameText2.BackColor = System.Drawing.Color.Transparent;
-            this.nameText2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nameText2.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText2.ForeColor = System.Drawing.Color.White;
-            this.nameText2.Location = new System.Drawing.Point(340, 98);
+            this.nameText2.Location = new System.Drawing.Point(325, 91);
             this.nameText2.Name = "nameText2";
-            this.nameText2.Size = new System.Drawing.Size(110, 108);
-            this.nameText2.TabIndex = 4;
+            this.nameText2.Size = new System.Drawing.Size(150, 150);
+            this.nameText2.TabIndex = 1;
             this.nameText2.Text = "A";
+            this.nameText2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // outputBox
             // 
