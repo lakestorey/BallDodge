@@ -40,11 +40,12 @@
             // 
             this.replayLabel.AutoSize = true;
             this.replayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.replayLabel.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.replayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.replayLabel.ForeColor = System.Drawing.Color.White;
             this.replayLabel.Location = new System.Drawing.Point(110, 441);
             this.replayLabel.Name = "replayLabel";
             this.replayLabel.Size = new System.Drawing.Size(262, 68);
+
             this.replayLabel.TabIndex = 3;
             this.replayLabel.Text = "Play Again";
             // 
@@ -63,8 +64,7 @@
             // nameText1
             // 
             this.nameText1.BackColor = System.Drawing.Color.Black;
-            this.nameText1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.nameText1.Font = new System.Drawing.Font("Kozuka Gothic Pro B", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nameText1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.nameText1.ForeColor = System.Drawing.Color.White;
             this.nameText1.Location = new System.Drawing.Point(174, 91);
             this.nameText1.Name = "nameText1";
@@ -105,9 +105,9 @@
             this.outputBox.ForeColor = System.Drawing.Color.White;
             this.outputBox.Location = new System.Drawing.Point(286, 260);
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(222, 31);
+            this.outputBox.Size = new System.Drawing.Size(232, 31);
             this.outputBox.TabIndex = 5;
-            this.outputBox.Text = "You got to level 6";
+            this.outputBox.Text = "Your Score Was 6";
             // 
             // EndGameScreen
             // 

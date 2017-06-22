@@ -164,6 +164,18 @@
   <ItemGroup>
     <None Include="Resources\Click2-Sebastian-759472264.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bump.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clickSound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -61,15 +61,6 @@ namespace BallDodge.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Banana_Peel_Slip_SoundBible_com_580403617 {
-            get {
-                return ResourceManager.GetStream("Banana_Peel_Slip_SoundBible_com_580403617", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap blackButton {
@@ -82,18 +73,36 @@ namespace BallDodge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Cartoon_Hop_SoundBible_com_553158131 {
+        internal static System.IO.UnmanagedMemoryStream bump {
             get {
-                return ResourceManager.GetStream("Cartoon_Hop_SoundBible_com_553158131", resourceCulture);
+                return ResourceManager.GetStream("bump", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Click2_Sebastian_759472264 {
+        internal static System.IO.UnmanagedMemoryStream clickSound {
             get {
-                return ResourceManager.GetStream("Click2_Sebastian_759472264", resourceCulture);
+                return ResourceManager.GetStream("clickSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream coin {
+            get {
+                return ResourceManager.GetStream("coin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Death {
+            get {
+                return ResourceManager.GetStream("Death", resourceCulture);
             }
         }
         
@@ -134,15 +143,6 @@ namespace BallDodge.Properties {
             get {
                 object obj = ResourceManager.GetObject("joyStick1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Ta_Da_SoundBible_com_1884170640 {
-            get {
-                return ResourceManager.GetStream("Ta_Da_SoundBible_com_1884170640", resourceCulture);
             }
         }
     }
