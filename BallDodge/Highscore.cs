@@ -43,7 +43,7 @@ namespace BallDodge
         public void saveScores(List<Highscore> _scoreList)
         {
             //Only saves the top 10 highscores
-            if (_scoreList.Count > 10)
+            if (_scoreList.Count > 8)
             {
                 for (int i = _scoreList.Count; i > 10; i--)
                 {
@@ -62,7 +62,7 @@ namespace BallDodge
 
                 //Write sub-elements
                 writer.WriteElementString("name", hs.name);
-                writer.WriteElementString("level", hs.level);
+                writer.WriteElementString("score", hs.level);
 
                 // end the "highscore" element
                 writer.WriteEndElement();

@@ -52,6 +52,7 @@
             this.highscoreDisplay.Name = "highscoreDisplay";
             this.highscoreDisplay.Size = new System.Drawing.Size(483, 253);
             this.highscoreDisplay.TabIndex = 1;
+            this.highscoreDisplay.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // mainMenuLabel
             // 

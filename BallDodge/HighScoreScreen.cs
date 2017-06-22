@@ -50,11 +50,11 @@ namespace BallDodge
             {
                 if ((i + 1) >= 10)
                 {
-                    highscoreDisplay.Text += (i + 1) + ".  " + Form1.highscoreList[i].name + "   level " + Form1.highscoreList[i].level + "\n";
+                    highscoreDisplay.Text += (i + 1) + ".  " + Form1.highscoreList[i].name + "      Score " + Form1.highscoreList[i].level + "\n";
                 }
                 else
                 {
-                    highscoreDisplay.Text += (i + 1) + ".   " + Form1.highscoreList[i].name + "   level " + Form1.highscoreList[i].level + "\n";
+                    highscoreDisplay.Text += (i + 1) + ".   " + Form1.highscoreList[i].name + "     Score " + Form1.highscoreList[i].level + "\n";
                 }
             }
         }
